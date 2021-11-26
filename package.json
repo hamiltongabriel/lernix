@@ -1,0 +1,34 @@
+{
+  "name": "lerna",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "greet": "scripty",
+    "build": "scripty",
+    "lint": "scripty",
+    "dev": "scripty"
+  },
+  "scripty": {
+    "path": "./scripts/workspace"
+  },
+  "husky":  {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@commitlint/config-lerna-scopes": "^15.0.0",
+    "commitlint": "^15.0.0",
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0",
+    "lerna-changelog": "^2.2.0",
+    "scripty": "^2.0.0"
+  }
+}
